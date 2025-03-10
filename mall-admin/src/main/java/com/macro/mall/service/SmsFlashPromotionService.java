@@ -30,12 +30,12 @@ public interface SmsFlashPromotionService {
     int updateStatus(Long id, Integer status);
 
     /**
-     * 获取详细信息
+     * 获取活动详情
      */
     SmsFlashPromotion getItem(Long id);
 
     /**
-     * 分页查询活动
+     * 根据关键字分页查询活动
      */
     List<SmsFlashPromotion> list(String keyword, Integer pageSize, Integer pageNum);
 }

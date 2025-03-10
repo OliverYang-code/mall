@@ -30,8 +30,18 @@ public interface HomeService {
     List<PmsProductCategory> getProductCateList(Long parentId);
 
     /**
-     * 根据专题分类分页获取专题
+     * 根据专题分类id分页获取专题
      * @param cateId 专题分类id
      */
     List<CmsSubject> getSubjectList(Long cateId, Integer pageSize, Integer pageNum);
+
+    /**
+     * 分页获取人气推荐商品
+     */
+    List<PmsProduct> hotProductList(Integer pageNum, Integer pageSize);
+
+    /**
+     * 分页获取新品推荐商品
+     */
+    List<PmsProduct> newProductList(Integer pageNum, Integer pageSize);
 }

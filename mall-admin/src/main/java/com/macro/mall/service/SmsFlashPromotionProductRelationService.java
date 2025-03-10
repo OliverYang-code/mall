@@ -18,7 +18,7 @@ public interface SmsFlashPromotionProductRelationService {
     int create(List<SmsFlashPromotionProductRelation> relationList);
 
     /**
-     * 修改关联相关信息
+     * 修改关联信息
      */
     int update(Long id, SmsFlashPromotionProductRelation relation);
 
@@ -33,7 +33,7 @@ public interface SmsFlashPromotionProductRelationService {
     SmsFlashPromotionProductRelation getItem(Long id);
 
     /**
-     * 分页查询相关商品及促销信息
+     * 根据限时购和场次id分页查询限时购商品信息
      *
      * @param flashPromotionId        限时购id
      * @param flashPromotionSessionId 限时购场次id
@@ -41,10 +41,9 @@ public interface SmsFlashPromotionProductRelationService {
     List<SmsFlashPromotionProduct> list(Long flashPromotionId, Long flashPromotionSessionId, Integer pageSize, Integer pageNum);
 
     /**
-     * 根据活动和场次id获取商品关系数量
-     * @param flashPromotionId
-     * @param flashPromotionSessionId
-     * @return
+     * 根据限时购和场次id获取商品关系数量
+     * @param flashPromotionId        限时购id
+     * @param flashPromotionSessionId 限时购场次id
      */
     long getCount(Long flashPromotionId,Long flashPromotionSessionId);
 }
